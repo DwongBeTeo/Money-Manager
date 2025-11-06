@@ -22,7 +22,7 @@ public class NotificationService {
     private final EmailService emailService;
     private final ExpenseService expenseService;
 
-    @Value("${money.manager.frontend.url}")
+    @Value("${MONEY_MANAGER_FRONTEND_URL}")
     private String frontendUrl;
 
 //    @Scheduled(cron = "0 * * * * *", zone = "Asia/Ho_Chi_Minh")//1p la gui 1 mail
@@ -41,8 +41,8 @@ public class NotificationService {
     }
 
 
-//    @Scheduled(cron = "0 * * * * *", zone = "Asia/Ho_Chi_Minh")//22h tối hằng ngày theo giờ việt
-    @Scheduled(cron = "0 0 23 * * *", zone = "Asia/Ho_Chi_Minh")//22h tối hằng ngày theo giờ việt
+    @Scheduled(cron = "0 * * * * *", zone = "Asia/Ho_Chi_Minh")//22h tối hằng ngày theo giờ việt
+//    @Scheduled(cron = "0 0 23 * * *", zone = "Asia/Ho_Chi_Minh")//22h tối hằng ngày theo giờ việt
     public void sendDailyExpenseSummary() {
         log.info("Job Started: sendDailyExpenseSummary()");
         List<ProfileEntity> profiles = profileRepository.findAll();

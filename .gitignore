@@ -1,4 +1,9 @@
 HELP.md
+
+# Environment
+.env
+.env.local
+
 # target/
 target/classes/
 target/generated-sources/

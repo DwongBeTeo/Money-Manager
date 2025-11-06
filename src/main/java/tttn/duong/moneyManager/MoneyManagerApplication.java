@@ -1,5 +1,6 @@
 package tttn.duong.moneyManager;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -9,7 +10,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class MoneyManagerApplication {
 
 	public static void main(String[] args) {
+		Dotenv.configure().ignoreIfMissing().load(); // Đọc .env
 		SpringApplication.run(MoneyManagerApplication.class, args);
+
 	}
 
 }
