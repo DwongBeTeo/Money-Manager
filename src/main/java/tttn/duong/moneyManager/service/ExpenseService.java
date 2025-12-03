@@ -82,7 +82,7 @@ public class ExpenseService {
         return list.stream().map(this::toDTO).toList();
     }
 
-    //helper method
+    //helper methods
     private ExpenseEntity toEntity(ExpenseDTO dto, ProfileEntity profile, CategoryEntity category){
         return ExpenseEntity.builder()
                 .name(dto.getName())

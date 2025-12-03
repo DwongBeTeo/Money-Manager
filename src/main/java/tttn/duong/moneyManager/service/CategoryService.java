@@ -49,6 +49,8 @@ public class CategoryService {
                 .orElseThrow(() -> new RuntimeException("category not found or not accessible"));
         existingCategory.setName(dto.getName());
         existingCategory.setIcon(dto.getIcon());
+//        can change type but shouldn't
+//        existingCategory.setType(dto.getType());
         existingCategory = categoryRepository.save(existingCategory);
         return toDTO(existingCategory);
     }

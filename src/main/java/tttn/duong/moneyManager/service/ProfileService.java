@@ -28,7 +28,7 @@ public class ProfileService {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 
-    @Value("${MONEY_MANAGER_BACKEND_URL}")
+    @Value("${app.activation.url}")
     private String activationURL;
 
     //Add methods to handle profile-related operations: crud

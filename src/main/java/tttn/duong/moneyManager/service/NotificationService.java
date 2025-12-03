@@ -41,8 +41,8 @@ public class NotificationService {
     }
 
 
-//    @Scheduled(cron = "0 * * * * *", zone = "Asia/Ho_Chi_Minh")//22h tối hằng ngày theo giờ việt
-    @Scheduled(cron = "0 0 23 * * *", zone = "Asia/Ho_Chi_Minh")//22h tối hằng ngày theo giờ việt
+//    @Scheduled(cron = "0 * * * * *", zone = "Asia/Ho_Chi_Minh")//23h tối hằng ngày theo giờ việt
+    @Scheduled(cron = "0 0 23 * * *", zone = "Asia/Ho_Chi_Minh")//23h tối hằng ngày theo giờ việt
     public void sendDailyExpenseSummary() {
         log.info("Job Started: sendDailyExpenseSummary()");
         List<ProfileEntity> profiles = profileRepository.findAll();
